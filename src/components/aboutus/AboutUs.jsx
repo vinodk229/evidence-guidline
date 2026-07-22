@@ -3,7 +3,6 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import assets from "../../assets/assets";
-import { Link } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
