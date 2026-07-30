@@ -6,7 +6,6 @@ import {
   Baby,
   Brain,
   ChevronRight,
-  Link,
 } from "lucide-react";
 
  const categories = [
@@ -129,6 +128,7 @@ const WhatsNew = () => {
                 key={index}
                 href={item.path}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="group block"
               >
                 <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm transition-all duration-300">
