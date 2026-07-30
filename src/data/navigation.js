@@ -7,7 +7,7 @@ export const navigation = [
     title: "About Us",
     children: [
       {
-        title: "About HTAIn",
+        title: "About CEG",
         path: "/abouthtain",
       },
       {
@@ -16,7 +16,7 @@ export const navigation = [
       },
       {
         title: "Minister of State",
-        path: "/minister-state",
+        path: "#",
       },
       {
         title: "Secretary",
@@ -24,7 +24,7 @@ export const navigation = [
       },
       {
         title: "Additional Secretary",
-        path: "/additional-secretary",
+        path: "#",
       },
       {
         title: "Objectives",
@@ -37,14 +37,7 @@ export const navigation = [
             title: "CEG Scientists",  
             path: "cegscientists",
           },
-          {
-            title: "TAC",
-            path: "/minister/previous",
-          },
-           {
-            title: "HTAIn Secretariat",
-            path: "/minister/previous",
-          },
+         
         ],
       }
     ],
@@ -77,11 +70,11 @@ export const navigation = [
     children: [
       {
         title: "Upcoming Events",
-        path: "/events/upcoming",
+        path: "/#",
       },
       {
         title: "Past Events",
-        path: "/events/past",
+        path: "#",
       },
     ],
   },
@@ -89,4 +82,7 @@ export const navigation = [
     title: "Contact Us",
     path: "/contact",
   },
+
+ 
+  
 ];

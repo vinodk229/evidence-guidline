@@ -54,7 +54,7 @@ const Navbar = () => {
               className="hidden  hero-btn 2xl:inline-flex items-center gap-3 rounded-full bg-blue-800 px-8 py-4 font-semibold text-white transition-all duration-300 hover:bg-blue-700"
             >
             
-              Portal
+             Guidelines Submission Portal
               <FaArrowRight />
             </Link>
             {/* Mobile Menu Button */}

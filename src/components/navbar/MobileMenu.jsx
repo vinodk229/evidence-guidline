@@ -23,7 +23,7 @@ const MobileMenu = ({ isOpen, setIsOpen, navigation }) => {
         }`}
       >
         <div className="flex items-center justify-between p-4 border-b">
-          <h2 className="font-semibold text-lg">Health Technology</h2>
+          <h2 className="font-semibold text-lg">Centre for Evidence Based Guidelines </h2>
 
           <button onClick={() => setIsOpen(false)}>
             <X size={24} />

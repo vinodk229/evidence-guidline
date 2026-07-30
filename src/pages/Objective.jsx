@@ -85,7 +85,7 @@ const Objective = () => {
             <img
               src={assets.submission}
               alt="Objectives"
-              className="h-[400px] w-full rounded-2xl object-cover shadow-xl"
+              className="h-[540px] w-full rounded-2xl object-cover shadow-xl border p-3"
             />
           </div>
 

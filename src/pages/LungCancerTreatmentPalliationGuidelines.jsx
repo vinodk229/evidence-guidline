@@ -192,8 +192,8 @@ const LungCancerTreatmentPalliationGuidelines = () => {
                             font-medium text-slate-800
                             "
                         >
-                            <span className="mb-1 block text-xs font-semibold uppercase text-slate-500 md:hidden">
-                            Document Name
+                            <span className="mb-1 block text-lg font-bold uppercase text-slate-500 md:hidden">
+                              Document Name
                             </span>
                             {doc.title}
                         </td>
@@ -201,12 +201,12 @@ const LungCancerTreatmentPalliationGuidelines = () => {
                         <td
                             className="
                             block md:table-cell
-                            md:px-6 md:py-5
-                            md:text-center
+                            md:px-6 md:py-4
+                            md:text-end
                             "
                         >
-                            <span className="mb-2 block text-xs font-semibold uppercase text-slate-500 md:hidden">
-                            Action
+                            <span className="mb-2 block text-lg font-semibold uppercase text-slate-500 md:hidden">
+                             Action
                             </span>
 
                             <a
@@ -215,7 +215,7 @@ const LungCancerTreatmentPalliationGuidelines = () => {
                             rel="noopener noreferrer"
                             className="
                                 inline-flex w-full items-center justify-center gap-2
-                                rounded-lg bg-blue-700 px-4 py-3
+                                rounded-lg bg-blue-700 px-3 py-3
                                 text-sm font-medium text-white
                                 transition hover:bg-blue-800
                                 md:w-auto
@@ -246,8 +246,8 @@ const LungCancerTreatmentPalliationGuidelines = () => {
                         <th className="px-6 py-4 text-left font-semibold text-slate-700">
                         Document Name
                         </th>
-                        <th className="px-6 py-4 text-center font-semibold text-slate-700">
-                        View
+                        <th className="px-8 py-4 text-end font-semibold text-slate-700">
+                          View
                         </th>
                     </tr>
                     </thead>
@@ -278,7 +278,7 @@ const LungCancerTreatmentPalliationGuidelines = () => {
                             className="
                             block md:table-cell
                             md:px-6 md:py-5
-                            md:text-center
+                            md:text-end
                             "
                         >
                             <span className="mb-2 block text-xs font-semibold uppercase text-slate-500 md:hidden">
@@ -291,7 +291,7 @@ const LungCancerTreatmentPalliationGuidelines = () => {
                             rel="noopener noreferrer"
                             className="
                                 inline-flex w-full items-center justify-center gap-2
-                                rounded-lg bg-blue-700 px-4 py-3
+                                rounded-lg bg-blue-700 px-3 py-3
                                 text-sm font-medium text-white
                                 transition hover:bg-blue-800
                                 md:w-auto

@@ -37,12 +37,12 @@ const Footer = () => {
             </h3>
 
             <div className="space-y-2">
-              <Link
+              {/* <Link
                 to="#"
                 className="block transition duration-300 hover:text-white"
               >
                 Resource Centres
-              </Link>
+              </Link> */}
 
               <Link
                 to="#"
@@ -62,7 +62,7 @@ const Footer = () => {
                 to="#"
                 className="block transition duration-300 hover:text-white"
               >
-                About HTAIn
+                About CEG
               </Link>
             </div>
           </div>
@@ -100,8 +100,8 @@ const Footer = () => {
         {/* Divider */}
         <div className="mt-10 border-t border-gray-700 pt-6">
           <p className="text-center text-sm md:text-left">
-            © Copyright 2026 by DHR. All Rights Reserved. Designed by BMI
-            Division ICMR
+            © Copyright 2026 by DHR. All Rights Reserved. Designed by DHR
+           
           </p>
         </div>
       </div>

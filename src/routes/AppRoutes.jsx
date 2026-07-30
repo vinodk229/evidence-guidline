@@ -14,6 +14,7 @@ import ProcessOfGuideslineDevelopment from '../pages/ProcessOfGuideslineDevelopm
 import StemCellTherapyGuidelines from '../pages/StemCellTherapyGuidelines'
 import LungCancerTreatmentPalliationGuidelines from '../pages/LungCancerTreatmentPalliationGuidelines'
 import WorkshopsConducted from '../pages/WorkshopsConducted'
+import Contact from '../pages/Contact'
 const AppRoutes = () => {
   return (
     <BrowserRouter>
@@ -31,6 +32,7 @@ const AppRoutes = () => {
                 <Route path='/stem-cell-therapy-guidelines' element={<StemCellTherapyGuidelines/>}/>
                 <Route path='/lung-cancer-treatment-and-palliation-guidelines' element={<LungCancerTreatmentPalliationGuidelines/>} />
                 <Route path='/workshop-conducted' element={<WorkshopsConducted/>} />
+                <Route path='/contact' element={<Contact />}/>
            </Route>
         </Routes>
     </BrowserRouter>
