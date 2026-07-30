@@ -107,7 +107,7 @@ const Secretary = () => {
             Major Achievements
           </h2>
 
-          <div className="grid gap-6">
+          <div className="grid gap-3">
             {achievements.map((item, index) => (
               <div
                 key={index}

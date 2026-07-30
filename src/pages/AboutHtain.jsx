@@ -121,7 +121,7 @@ const AboutHtain = () => {
               <div className="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center">
                <SiTransmission className='text-4xl'/>
               </div>
-              <h3 className="text-2xl font-bold text-gray-800">Mission</h3>
+              <h3 className="text-2xl text-gray-800">Mission</h3>
             </div>
 
             <ul className="space-y-4">

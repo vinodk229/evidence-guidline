@@ -3,14 +3,8 @@ import assets from '../assets/assets'
 import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-const resourceHubs = [
- "Department of Paediatric Pulmonology, Post Graduate Institute of Medical Education and Research (PGIMER), Chandigarh, Punjab.",
-"Department of Neurology, All India Institute of Medical Sciences (AIIMS), New Delhi.",
-"Department of Reproductive Medicine and Surgery, Christian Medical College, Vellore.",
-"Division of Evidence Synthesis, Datta Meghe Institute of Higher Education and Research (DMIHER), Wardha, Maharashtra.",
-"Department of Pharmacy Practice, National Institute of Pharmaceutical Education and Research (NIPER), Guwahati, Assam.",
-"Department of Surgical Oncology, Tata Memorial centre, Mumbai."
-];
+import { htaResourceData } from '../data/hubCenter';
+
 gsap.registerPlugin(ScrollTrigger);
 const ResourceHubsCentres = () => {
    const titleRef = useRef(null);
@@ -43,7 +37,7 @@ const ResourceHubsCentres = () => {
     }, []);
   
     const headingText =
-      "CGA Resource Hubs";
+      "CGA Resource Network Across India";
   return (
     <>
     <section>
@@ -56,19 +50,13 @@ const ResourceHubsCentres = () => {
           </h1>
         </div>
     </section>
-    <section className="relative overflow-hidden bg-gradient-to-br from-sky-50 via-white to-blue-50 py-16 lg:py-20">
-      <div className="absolute inset-0">
-        <div className="absolute top-0 right-0 h-72 w-72 rounded-full bg-blue-100 blur-3xl opacity-50"></div>
-        <div className="absolute bottom-0 left-0 h-72 w-72 rounded-full bg-cyan-100 blur-3xl opacity-50"></div>
-      </div>
-
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-        {/* Header */}
-        <div className="mb-12 text-center">
-        
-           <h2
+    <section className="bg-slate-50 py-20">
+      <div className="container mx-auto px-4">
+        <div className='text-center pb-8'>
+             <p class="inline-block px-4 py-2 text-sm font-medium bg-red-100 text-red-600 rounded-full mb-4">CGA Resource</p>
+          <h2
               ref={titleRef}
-              className="text-2xl md:text-4xl lg:text-4xl font-bold text-gray-900 mb-6 leading-tight overflow-hidden"
+              className="text-2xl mt-4 md:text-4xl lg:text-4xl text-center font-bold text-gray-900 mb-6 leading-tight overflow-hidden"
             >
               {headingText.split(" ").map((word, index) => (
                 <span
@@ -79,45 +67,77 @@ const ResourceHubsCentres = () => {
                 </span>
               ))}
             </h2>
-          <div className="mx-auto mt-4 h-1.5 w-24 rounded-full bg-blue-600"></div>
         </div>
+        
+        <div className="grid lg:grid-cols-2 gap-10">
+          <div className="rounded-3xl p-6 bg-white inline-block">
+            <div className="flex justify-between items-center mb-6">
+              <h3 className="text-xl uppercase text-slate-800">
+                Network Coverage
+              </h3>
 
-        {/* Cards */}
-       <section className="py-8">
-          <div className="container mx-auto px-4">
-            <div className="grid items-center gap-12 lg:grid-cols-2">
-              
-              {/* India Map */}
-              <div className="flex justify-center">
-                <img
-                  src={assets.indiaMap}
-                  alt="India Map"
-                  className="max-w-md w-full object-contain border rounded-lg p-3 border-gray-400"
-                />
+              <div className="flex gap-4 text-sm">
+                <div className="flex items-center gap-2">
+                  <span className="w-3 h-3 rounded-full bg-green-500"></span>
+                  Resource Hubs
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <span className="w-3 h-3 rounded-full bg-orange-500"></span>
+                  RRCs
+                </div>
               </div>
+            </div>
+           <img src={assets.indiaMap} className="w-full max-h-[500px] object-contain" alt='India map'/>
+          </div>
 
-              {/* Resource Hubs List */}
-              <div>
-               
-                <ul className="space-y-4">
-                  {resourceHubs.map((hub, index) => (
-                    <li
-                      key={index}
-                      className="flex items-start gap-3 text-slate-700"
-                    >
-                      <span className="mt-2 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-blue-700"></span>
+          {/* Content Section */}
+          <div className="space-y-8">
 
-                      <span className="text-lg leading-relaxed">
-                        {hub}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
+            {/* Resource Hubs */}
+            <div className="bg-white rounded-3xl shadow-lg p-8">
+              <h3 className="text-2xl mb-6">
+               CGA  Resource Hubs
+              </h3>
+
+              <div className="space-y-3">
+                {htaResourceData.hubs.map((hub, index) => (
+                  <div
+                    key={index}
+                    className="flex gap-3 p-3 rounded-xl hover:bg-blue-50 transition"
+                  >
+                    <div className="w-3 h-3 rounded-full bg-green-500 mt-2" />
+
+                    <p className="text-slate-700 leading-relaxed">
+                      {hub}
+                    </p>
+                  </div>
+                ))}
               </div>
-
             </div>
           </div>
-        </section>
+        </div>
+        <div className='grid grid-cols-1 mt-8'>
+          <div className="bg-white rounded-3xl shadow-lg p-8">
+              <h3 className="text-2xl mb-4">
+               CGA Resource Centres (RRCs)
+              </h3>
+              <div className="grid md:grid-cols-2 gap-3">
+                {htaResourceData.rrcs.map((centre, index) => (
+                  <div
+                    key={index}
+                    className="flex gap-3 p-3 rounded-xl hover:bg-orange-50 transition"
+                  >
+                    <div className="w-3 h-3 rounded-full bg-orange-500 mt-2" />
+
+                    <p className="text-slate-700 text-sm">
+                      {centre}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+        </div>
       </div>
     </section>
     </>

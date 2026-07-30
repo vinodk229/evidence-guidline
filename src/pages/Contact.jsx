@@ -54,13 +54,13 @@ const Contact = () => {
                 </div>
 
                 <h3 className="text-2xl text-gray-900">
-                  Shri Pradyumn Kumar
+                  Department of Health Research
                 </h3>
               </div>
 
               <div className="text-gray-600 leading-7">
                 <p>
-                   Under Secretary, Department of Health Research
+                
                    2nd Floor, IRCS Building, 1, Red Cross Road, New Delhi – 110001.
                 </p>
 
@@ -91,7 +91,7 @@ const Contact = () => {
               <div className="text-gray-600 leading-7">
                 <p>
                    Shri Sanjeev Singh<br />
-                   Under Secretary, Department of Health Research
+                   Under Secretary, 
                    2nd Floor, IRCS Building,
                    <br/>
                    1, Red Cross Road, New Delhi – 110001.

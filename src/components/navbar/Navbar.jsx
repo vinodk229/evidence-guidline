@@ -49,7 +49,7 @@ const Navbar = () => {
               )}
             </div>
              <Link
-              to="https://htain-mis.icmr.org.in/login"
+              to="https://schemes.dhr.gov.in/"
               target="_blank"
               className="hidden  hero-btn 2xl:inline-flex items-center gap-3 rounded-full bg-blue-800 px-8 py-4 font-semibold text-white transition-all duration-300 hover:bg-blue-700"
             >

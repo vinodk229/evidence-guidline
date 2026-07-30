@@ -1,78 +1,211 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { BsArrowUpRight } from "react-icons/bs";
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import SplitType from "split-type";
-const whatsNewData = [
+import React from 'react'
+import {
+  HeartPulse,
+  Droplets,
+  Bug,
+  Baby,
+  Brain,
+  ChevronRight,
+  Link,
+} from "lucide-react";
+
+ const categories = [
+    {
+      icon: HeartPulse,
+      title: "Cardiovascular Health",
+      count: 25,
+    },
+    {
+      icon: Droplets,
+      title: "Diabetes & Endocrinology",
+      count: 18,
+    },
+    {
+      icon: Bug,
+      title: "Infectious Diseases",
+      count: 32,
+    },
+    {
+      icon: Baby,
+      title: "Maternal & Child Health",
+      count: 21,
+    },
+    {
+      icon: Brain,
+      title: "Mental Health",
+      count: 16,
+    },
+  ];
+
+  const whatsNewData = [
   {
     title: "Expression of Interest (EOI) for Establishing Technical Resource Centres (TRCs) under the Centre for Evidence based Guidelines, DHR",
-    link: "https://www.dhr.gov.in/static/uploads/2026/05/8508d0ab0db90db2bdd6be7c873def6d.pdf",
+    path: "https://www.dhr.gov.in/static/uploads/2026/05/8508d0ab0db90db2bdd6be7c873def6d.pdf",
   },
   {
     title: "On the Eve of World Cancer Day Honorable Union Health Minister Releases Evidence Based Guidelines for Lung Cancer Treatment and Palliation (3 February 2026)",
-    link: "#",
+    path: "#",
   },
-
-  
 ];
-const WhatsNew = () => {
-     const titleRef = useRef(null);
-    
-     useEffect(() => {
-        const splitText = new SplitType(titleRef.current, {
-          types: "chars",
-        });
-    
-        gsap.from(splitText.chars, {
-          y: 80,
-          opacity: 0,
-          rotateX: -90,
-          stagger: 0.05,
-          duration: 0.8,
-          ease: "power4.out",
-          scrollTrigger: {
-            trigger: titleRef.current,
-            start: "top 80%",
-            toggleActions: "play none none none",
-          },
-        });
-    
-        return () => {
-          splitText.revert();
-          ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-        };
-      }, []);
-  return (
-    <section className="bg-[#f5f5f5] py-10 lg:py-24">
-      <div className="container mx-auto px-6">
-        <div className="max-w-3xl mx-auto text-center mb-6 lg:mb-12"> <span className="inline-block px-4 py-2 text-sm font-medium bg-red-100 text-red-600 rounded-full mb-4"> What's New </span>
-           
-            <h2
-              ref={titleRef}
-              className="text-2xl md:text-4xl lg:text-4xl text-center text-gray-900 leading-tight overflow-hidden pb-5 lg:pb-14"
-            >
-             Latest Updates
-         </h2>
-        </div>
-        <div className="border-t border-gray-300">
-          {whatsNewData.map((item, index) => (
-            <Link
-              key={index}
-              to={item.link}
-              target="_blank"
-              className="group flex items-center justify-between border-b border-gray-300 py-8 px-4 transition-all duration-300 hover:bg-white"
-            >
-              <p className="text-md md:text-xl line-clamp-2 text-gray-900 transition-transform duration-300 group-hover:text-blue-700 group-hover:translate-x-2">
-                {item.title}
-              </p>
 
-              <span className="w-10 h-10 hidden lg:flex items-center justify-center rounded-full bg-blue-700 text-white transition-all duration-300 group-hover:bg-blue-800">
-                <BsArrowUpRight className="text-2xl transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
-              </span>
-            </Link>
-          ))}
+  const updates = [
+    {
+      image:
+      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=300",
+      title: "New Guideline: Hypertension Management in Adults",
+      date: "May 15, 2024",
+      badge: "NEW",
+    },
+    {
+      image:
+      "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=300",
+      title: "Updated: Type 2 Diabetes Care Guideline",
+      date: "May 02, 2024",
+    },
+    {
+      image:
+      "https://images.unsplash.com/photo-1573497491765-cf4147f4d2c4?w=300",
+      title: "Webinar: GRADE Methodology in Guideline Development",
+      date: "Apr 20, 2024",
+    },
+  ];
+const WhatsNew = () => {
+  return (
+    <section className="bg-white py-10 lg:py-20">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
+          {/* Explore Guidelines */}
+          <div className="rounded-xl border border-gray-200 bg-white shadow-sm lg:col-span-3">
+            <div className="flex items-center justify-between p-5">
+              <h3 className="text-lg font-semibold text-gray-800 uppercase">
+                Explore Guidelines
+              </h3>
+              <button className="text-sm font-medium text-blue-600 uppercase">
+                View All
+              </button>
+            </div>
+
+            {categories.map((item, index) => {
+              const Icon = item.icon;
+
+              return (
+                <div
+                  key={index}
+                  className="flex items-center justify-between border-t border-gray-100 px-5 py-4 hover:bg-gray-50"
+                >
+                  <div className="flex items-center gap-3">
+                    <Icon className="h-7 w-7 text-blue-600" />
+                    <div>
+                      <h4 className="font-medium text-gray-800">
+                        {item.title}
+                      </h4>
+                      <p className="text-sm text-gray-500">
+                        {item.count} Guidelines
+                      </p>
+                    </div>
+                  </div>
+
+                  <ChevronRight className="h-5 w-5 text-gray-400" />
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Development Process */}
+          <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm lg:col-span-6">
+            <div className="mb-8 flex items-center justify-between">
+              <h3 className="text-lg font-semibold text-gray-800 uppercase">
+               What’s New
+              </h3>
+
+              <button className="text-sm font-medium text-blue-600 uppercase">
+                View All
+              </button>
+            </div>
+
+            <div className="grid grid-cols-1 gap-6">
+            {whatsNewData.map((item, index) => (
+              <a
+                key={index}
+                href={item.path}
+                target="_blank"
+                className="group block"
+              >
+                <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm transition-all duration-300">
+                  <div className="flex items-start gap-4">
+                    <div className="xl:flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-600 font-semibold hidden">
+                      {index + 1}
+                    </div>
+
+                    <div className="flex-1">
+                      <h3 className="text-base text-gray-900 group-hover:text-blue-600 transition-colors">
+                        {item.title}
+                      </h3>
+
+                      {/* <p className="mt-2 text-sm text-gray-500 border border-gray-200 p-2 inline-block rounded-full px-3 bg-blue-100">
+                       View Document
+                      </p> */}
+                    </div>
+
+                    <svg
+                      className="h-5 w-5 text-gray-400 group-hover:text-blue-600 transition-colors"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            ))}
+            </div>
+          </div>
+
+          {/* Latest Updates */}
+          <div className="rounded-xl border border-gray-200 bg-white shadow-sm lg:col-span-3">
+            <div className="flex items-center justify-between p-5">
+              <h3 className="text-lg font-semibold text-gray-800 uppercase">
+                Latest Updates
+              </h3>
+              <button className="text-sm font-medium text-blue-600 uppercase">
+                View All
+              </button>
+            </div>
+
+            <div className="space-y-4 p-5 pt-0">
+              {updates.map((item, index) => (
+                <div key={index} className="flex gap-3">
+                  <img
+                    src={item.image}
+                    alt=""
+                    className="h-16 w-20 rounded-md object-cover"
+                  />
+
+                  <div>
+                    {item.badge && (
+                      <span className="mb-1 inline-block rounded bg-green-100 px-2 py-0.5 text-[10px] font-semibold text-green-700">
+                        {item.badge}
+                      </span>
+                    )}
+
+                    <h4 className="line-clamp-2 text-sm font-medium text-gray-800">
+                      {item.title}
+                    </h4>
+
+                    <p className="mt-1 text-xs text-gray-500">
+                      {item.date}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

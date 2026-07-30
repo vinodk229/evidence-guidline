@@ -4,14 +4,16 @@ import AboutUs from '../components/aboutus/AboutUs'
 import KeyStatistics from '../components/statics/KeyStatistics'
 import VideoSection from '../components/video/VideoSection'
 import WhatsNew from '../components/whatsnew/WhatsNew'
+import ClientLogoCarousel from '../components/clientsLogo/ClientLogoSection'
 const Home = () => {
   return (
     <div>
        <HeroSection />
        <AboutUs />
        <KeyStatistics />
-       <VideoSection/>
        <WhatsNew />
+       <VideoSection/>
+       <ClientLogoCarousel />
     </div>
   )
 }

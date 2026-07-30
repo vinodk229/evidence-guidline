@@ -31,7 +31,7 @@ const ClientLogoCarousel = () => {
                   src={logo}
                   alt={`Client Logo ${index + 1}`}
                   className="max-h-full max-w-full object-contain
-                             grayscale hover:grayscale-0
+                            
                              transition-all duration-300"
                   loading="lazy"
                 />

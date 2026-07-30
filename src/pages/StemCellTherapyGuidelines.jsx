@@ -118,15 +118,37 @@ const StemCellTherapyGuidelines = () => {
         </h1>
       </div>
       <div className='py-16'>
-        <div className='max-w-6xl mx-auto px-5'>
-            <h1
-        ref={titleRef}
-        className="max-w-7xl xl:max-w-5xl text-center text-2xl md:text-4xl tracking-wide"
-        >
-           Release of evidence-based guidelines for <br/>the use of STEM cell therapy
-        </h1>
-            <p className='text-center mt-8'>The Evidence based guidelines for the use of stem cell therapy in Neurological, Orthopedic, Pediatric and Cardiac disease conditions have been updated by adding a subgroup analysis based on the level of manipulation of stem cells in the included studies. In view of the update, the previous guidelines in the above four conditions stand null and void. The level of manipulation done to develop stem cell and stem cell derived products was interpreted by DHR secretariat into less than or more than minimal manipulation as defined by CDSCO (Annexed in guidelines) and the information provided in the trial itself.</p>
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-12 gap-8 items-center">
+            
+            {/* 5 Columns */}
+            <div className="col-span-12 lg:col-span-5">
+              <img
+                src={assets.indiaMap}
+                alt="India Map"
+                className="w-full h-auto object-contain border border-gray-100 p-4 rounded-md"
+              />
+            </div>
+
+            {/* 7 Columns */}
+            <div className="col-span-12 lg:col-span-7">
+              <h1
+                ref={titleRef}
+                className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-wide"
+              >
+                Release of evidence-based guidelines for
+                <br className="hidden md:block" />
+                the use of STEM cell therapy
+              </h1>
+
+              <p className="mt-6 text-gray-600 leading-relaxed">
+              The Evidence based guidelines for the use of stem cell therapy in Neurological, Orthopedic, Pediatric and Cardiac disease conditions have been updated by adding a subgroup analysis based on the level of manipulation of stem cells in the included studies. In view of the update, the previous guidelines in the above four conditions stand null and void. The level of manipulation done to develop stem cell and stem cell derived products was interpreted by DHR secretariat into less than or more than minimal manipulation as defined by CDSCO (Annexed in guidelines) and the information provided in the trial itself.
+              </p>
+            </div>
+
+          </div>
         </div>
+      
         <div className='container mx-auto py-10'>
             <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
               <div className="overflow-x-auto">
