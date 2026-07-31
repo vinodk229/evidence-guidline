@@ -6,6 +6,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import assets from '../assets/assets';
 import { FaEyeLowVision } from "react-icons/fa6";
 import { SiTransmission } from "react-icons/si";
+import { BsTwitterX } from "react-icons/bs";
+import { FaLinkedinIn } from "react-icons/fa6";
+import { FaFacebookF } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa6";
 gsap.registerPlugin(ScrollTrigger);
 const AboutHtain = () => {
     const titleRef = useRef(null);
@@ -41,18 +45,52 @@ const AboutHtain = () => {
     "Centre for Evidence Based Guidelines";
   return (
     <section>
-      <div
-        className="w-full min-h-[280px] flex items-center justify-center relative overflow-hidden bg-cover bg-center"
-        style={{ backgroundImage: `url(${assets.htainBanner})` }}
-      >
-        <div className="absolute inset-0 bg-black/50"></div>
-        <h1 className="relative z-10 text-white text-4xl font-bold uppercase">
-         Introduction
-        </h1>
-      </div>
+      <nav className="breadcrumb-banner relative overflow-hidden">
+        <div className="container mx-auto px-6 py-12 lg:py-16">
+            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+            <div>
+                <h1 className="text-2xl lg:text-4xl font-medium text-white">
+                Gallery <span className="font-medium">Meadia</span>
+                </h1>
+
+                <div className="flex items-center gap-3 mt-4 text-sm">
+                <a
+                    href="/"
+                    className="text-gray-300 font-medium hover:text-blue-300 transition"
+                >
+                    Home
+                </a>
+
+                <span className="text-slate-400">&gt;</span>
+
+                <span className="text-white">
+                  About Us
+                </span>
+                </div>
+            </div>
+
+            <div className="flex-grow-0 flex items-center gap-5 bg-violet-500 px-6 py-3 rounded-full shadow-lg">
+                <button className="text-white hover:scale-110 transition">
+                  <BsTwitterX/>
+                </button>
+
+                <button className="text-white hover:scale-110 transition">
+                <FaLinkedinIn/>
+                </button>
+
+                <button className="text-white hover:scale-110 transition">
+                  <FaFacebookF/>
+                </button>
+                <button className="text-white hover:scale-110 transition">
+                  <FaInstagram/>
+                </button>
+            </div>
+        </div>
+        </div>
+      </nav>
       <div className="container mx-auto px-4 lg:px-8 py-10">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12">
-          <div className="overflow-hidden rounded-2xl">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] xl:gap-12">
+          <div className="overflow-hidden rounded-2xl order-2 md:order-1">
             <img
               src={assets.aboutGuidLine}
               alt="About Us"
@@ -60,7 +98,7 @@ const AboutHtain = () => {
             />
           </div>
 
-          <div>
+          <div className='order-1 md:order-2'>
             <h2
               ref={titleRef}
               className="text-2xl md:text-4xl lg:text-4xl font-bold text-gray-900 mb-6 leading-tight overflow-hidden"

@@ -64,3 +64,59 @@
 .animate-marquee {
   animation: marquee 20s linear infinite;
 }
+
+.guideline-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.guideline-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.guideline-container::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 999px;
+  transition: background 0.3s;
+}
+
+/* Show colored scrollbar on hover */
+.guideline-container:hover::-webkit-scrollbar-thumb {
+  background: #2563eb; /* blue-600 */
+}
+
+.guideline-container:hover::-webkit-scrollbar-track {
+  background: #e5e7eb; /* gray-200 */
+}
+
+/* Firefox */
+.guideline-container {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+.guideline-container:hover {
+  scrollbar-color: #2563eb #e5e7eb;
+}
+
+.breadcrumb-banner {
+  position: relative;
+  overflow: hidden;
+  background: #1e40af;
+}
+
+.breadcrumb-banner::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.08) 40%,
+    rgba(255, 255, 255, 0) 70%
+  );
+}

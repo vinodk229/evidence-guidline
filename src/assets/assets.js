@@ -14,6 +14,10 @@ import cancer from "./cancer-treatment.jpg";
 import icons1 from "./icons/mission.png";
 import icons2 from "./icons/opportunity.png";
 
+import photo1 from './photo/p3.jpg';
+import photo2 from './photo/p4.jpg';
+
+
 const assets = {
   logo,
   cfgLogo,
@@ -29,6 +33,8 @@ const assets = {
   cancer,
   icons1,
   icons2,
+  photo1,
+  photo2,
 };
 
 export default assets

@@ -17,7 +17,7 @@ const Navbar = () => {
 
             {/* Logo */}
             <div className="text-xl font-bold">
-              <img src={assets.centerForGuid} alt="Logo" className="xl:h-24 lg:h-16 h-13 w-60 xl:w-auto" />
+             <Link to={'./'}><img src={assets.centerForGuid} alt="Logo" className="xl:h-24 lg:h-16 h-13 w-52 xl:w-auto" /></Link> 
             </div>
 
             {/* Desktop Menu */}
@@ -54,7 +54,7 @@ const Navbar = () => {
               className="hidden  hero-btn 2xl:inline-flex items-center gap-3 rounded-full bg-blue-800 px-8 py-4 font-semibold text-white transition-all duration-300 hover:bg-blue-700"
             >
             
-             Guidelines Submission Portal
+             Guidelines  Portal
               <FaArrowRight />
             </Link>
             {/* Mobile Menu Button */}

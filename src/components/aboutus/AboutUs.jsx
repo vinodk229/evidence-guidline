@@ -2,7 +2,7 @@ import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import assets from '../../assets/assets'
-
+import { Link } from "lucide-react";
 gsap.registerPlugin(ScrollTrigger);
 
 const AboutUs = () => {
@@ -43,7 +43,7 @@ const AboutUs = () => {
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 items-center">
           
           {/* Image */}
-          <div className="overflow-hidden rounded-2xl">
+          <div className="overflow-hidden rounded-2xl hidden lg:flex">
             <img
               src={assets.centerForGuidLine}
               alt="About Us"
@@ -65,10 +65,14 @@ const AboutUs = () => {
                 </span>
               ))}
             </h2>
-
-            <p className="text-gray-600 leading-8 mb-6 line-clamp-3">
-              The development of evidence-based guidelines is crucial for enhancing healthcare quality, optimizing treatment strategies, and ensuring the efficient use of resources. Globally, organizations like the World Health Organization (WHO) continuously refine these guidelines through rigorous research and expert consensus. In India, the need for such guidelines is particularly pressing due to diverse healthcare challenges, regional disparities, and resource limitations. The fragmented nature of guideline development, along with the absence of a centralized authority, has impacted the uniformity and scientific rigor of clinical standards. 
-            </p>
+            <div className="mb-6">
+               <p className="text-gray-600 leading-8 line-clamp-6 lg:line-clamp-3 mb-4">
+                The development of evidence-based guidelines is crucial for enhancing healthcare quality, optimizing treatment strategies, and ensuring the efficient use of resources. Globally, organizations like the World Health Organization (WHO) continuously refine these guidelines through rigorous research and expert consensus. In India, the need for such guidelines is particularly pressing due to diverse healthcare challenges, regional disparities, and resource limitations. The fragmented nature of guideline development, along with the absence of a centralized authority, has impacted the uniformity and scientific rigor of clinical standards. 
+              </p>
+             <a className="text-blue-600 p-2" href='/abouthtain'>Read more...</a>
+            </div>
+           
+            
                <div className="flex flex-col lg:flex-row items-stretch gap-6">
               <div className="group relative flex flex-col sm:flex-row items-center sm:items-start p-5 bg-white border border-gray-100 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 w-full overflow-hidden">
                 <div className="absolute left-0 top-0 h-full w-1 bg-blue-600"></div>

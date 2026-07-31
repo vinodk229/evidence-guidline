@@ -4,6 +4,10 @@ import gsap from "gsap";
 import SplitType from "split-type";
 import assets from '../assets/assets';
 import { FaRegFilePdf } from "react-icons/fa6";
+import { BsTwitterX } from "react-icons/bs";
+import { FaLinkedinIn } from "react-icons/fa6";
+import { FaFacebookF } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa6";
 const documents = [
   {
     title:
@@ -108,15 +112,50 @@ const StemCellTherapyGuidelines = () => {
   }, []);
   return (
     <>
-     <div
-        className="w-full min-h-[280px] flex items-center justify-center relative overflow-hidden bg-cover bg-center px-5"
-        style={{ backgroundImage: `url(${assets.htainBanner})` }}
-          >
-        <div className="absolute inset-0 bg-black/50"></div>
-        <h1 className="relative z-10 text-white text-3xl xl:text-4xl font-bold uppercase">
-         Stem Cell Therapy Guidelines
-        </h1>
-      </div>
+    
+      <nav className="breadcrumb-banner relative overflow-hidden">
+        <div className="container mx-auto px-6 py-6 lg:py-16">
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+          <div>
+              <h1 className="text-2xl lg:text-4xl font-medium text-white">
+                    Stem Cell Therapy   <span className="font-medium"> Guidelines </span>
+              </h1>
+  
+              <div className="flex items-center gap-3 mt-4 text-sm">
+              <a
+                  href="/"
+                  className="text-gray-300 font-medium hover:text-blue-300 transition"
+              >
+                  Home
+              </a>
+  
+              <span className="text-slate-400">&gt;</span>
+  
+              <span className="text-white">
+                   Stem Cell Therapy Guidelines
+              </span>
+              </div>
+          </div>
+  
+            <div className="flex-grow-0 xl:flex items-center gap-5 bg-violet-500 px-6 py-3 rounded-full shadow-lg hidden">
+                <button className="text-white hover:scale-110 transition">
+                    <BsTwitterX/>
+                </button>
+  
+                <button className="text-white hover:scale-110 transition">
+                  <FaLinkedinIn/>
+                </button>
+  
+                <button className="text-white hover:scale-110 transition">
+                  <FaFacebookF/>
+                </button>
+                <button className="text-white hover:scale-110 transition">
+                  <FaInstagram/>
+                </button>
+            </div>
+          </div>
+        </div>
+      </nav>
       <div className='py-16'>
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-12 gap-8 items-center">
@@ -134,7 +173,7 @@ const StemCellTherapyGuidelines = () => {
             <div className="col-span-12 lg:col-span-7">
               <h1
                 ref={titleRef}
-                className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-wide"
+                className="text-2xl md:text-3xl lg:text-4xl tracking-wide"
               >
                 Release of evidence-based guidelines for
                 <br className="hidden md:block" />

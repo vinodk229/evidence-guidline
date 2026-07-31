@@ -5,6 +5,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
 import assets from "../assets/assets";
 import { FaRegFilePdf } from "react-icons/fa6";
+import { BsTwitterX } from "react-icons/bs";
+import { FaLinkedinIn } from "react-icons/fa6";
+import { FaFacebookF } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa6";
 gsap.registerPlugin(ScrollTrigger);
 
 const documents = [
@@ -82,18 +86,52 @@ const LungCancerTreatmentPalliationGuidelines = () => {
       }, []);
   return (
     <>
-    <div
-        className="w-full min-h-[280px] flex items-center justify-center relative overflow-hidden bg-cover bg-center"
-        style={{ backgroundImage: `url(${assets.htainBanner})` }}
-      >
-        <div className="absolute inset-0 bg-black/50"></div>
-        <h1 className="relative z-10 text-white text-4xl font-bold uppercase">
-         Introduction
-        </h1>
-      </div>
+      <nav className="breadcrumb-banner relative overflow-hidden">
+        <div className="container mx-auto px-6 py-6 lg:py-16">
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+          <div>
+              <h1 className="text-2xl lg:text-4xl font-medium text-white">
+                   Lung Cancer Treatment & <span className="font-medium"> Palliation Guidelines </span>
+              </h1>
+  
+              <div className="flex items-center gap-3 mt-4 text-sm">
+              <a
+                  href="/"
+                  className="text-gray-300 font-medium hover:text-blue-300 transition"
+              >
+                  Home
+              </a>
+  
+              <span className="text-slate-400">&gt;</span>
+  
+              <span className="text-white">
+                   Lung Cancer Treatment
+              </span>
+              </div>
+          </div>
+  
+            <div className="flex-grow-0 xl:flex items-center gap-5 bg-violet-500 px-6 py-3 rounded-full shadow-lg hidden">
+                <button className="text-white hover:scale-110 transition">
+                    <BsTwitterX/>
+                </button>
+  
+                <button className="text-white hover:scale-110 transition">
+                  <FaLinkedinIn/>
+                </button>
+  
+                <button className="text-white hover:scale-110 transition">
+                  <FaFacebookF/>
+                </button>
+                <button className="text-white hover:scale-110 transition">
+                  <FaInstagram/>
+                </button>
+            </div>
+          </div>
+        </div>
+      </nav>
    
     <section className="bg-white py-16">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto container px-4 sm:px-6 lg:px-8">
         
         {/* Title */}
         <div className="mb-12 text-center">
@@ -118,7 +156,7 @@ const LungCancerTreatmentPalliationGuidelines = () => {
             <img
               src={assets.cancer}
               alt="Cancer Awareness"
-              className="h-full w-full rounded-2xl object-cover shadow-xl"
+              className="max-h-[450px] w-full rounded-2xl object-cover shadow-xl"
             />
           </div>
 
@@ -160,7 +198,7 @@ const LungCancerTreatmentPalliationGuidelines = () => {
       </div>
     </section>
     <section className="pb-12">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto container px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl font-normal pb-4">The Evidence-Based Guidelines for Lung Cancer Treatment and Palliation can be accessed below:</h2>
             <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
                 <div className="overflow-x-auto">
@@ -236,7 +274,7 @@ const LungCancerTreatmentPalliationGuidelines = () => {
 
 
     <section className="pb-12">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto container  px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl font-normal pb-4">Plain language summary for patients, caregivers and families can be accessed here</h2>
             <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
                 <div className="overflow-x-auto">

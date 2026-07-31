@@ -5,34 +5,47 @@ import {
   Bug,
   Baby,
   Brain,
+  Globe,
   ChevronRight,
+  ShieldCheck,
+  FileText,
+  Microscope,
+  Database,
+  ExternalLink,
 } from "lucide-react";
 
- const categories = [
+import { Link } from 'react-router-dom';
+
+  const categories = [
     {
       icon: HeartPulse,
-      title: "Cardiovascular Health",
+      title: "Gazette Notification for National Registry",
       count: 25,
+      path: "/gazette-notification-national-registry",
     },
     {
       icon: Droplets,
-      title: "Diabetes & Endocrinology",
+      title: "Gazette notification for UT Board With and Without Legislature",
       count: 18,
+      path: "/gazette-notification-ut-board",
     },
     {
       icon: Bug,
-      title: "Infectious Diseases",
+      title: "Gazette Notification Appropriate Authority",
       count: 32,
+      path: "/gazette-notification-appropriate-authority",
     },
     {
       icon: Baby,
-      title: "Maternal & Child Health",
+      title: "Gazette Notification National ART and Surrogacy Board",
       count: 21,
+      path: "/gazette-notification-national-art-surrogacy-board",
     },
     {
       icon: Brain,
-      title: "Mental Health",
+      title: "Gazette notification for removal of difficulty (ART Act and Surrogacy Act, 2021)",
       count: 16,
+      path: "/gazette-notification-removal-of-difficulty",
     },
   ];
 
@@ -47,27 +60,39 @@ import {
   },
 ];
 
-  const updates = [
-    {
-      image:
-      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=300",
-      title: "New Guideline: Hypertension Management in Adults",
-      date: "May 15, 2024",
-      badge: "NEW",
-    },
-    {
-      image:
-      "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=300",
-      title: "Updated: Type 2 Diabetes Care Guideline",
-      date: "May 02, 2024",
-    },
-    {
-      image:
-      "https://images.unsplash.com/photo-1573497491765-cf4147f4d2c4?w=300",
-      title: "Webinar: GRADE Methodology in Guideline Development",
-      date: "Apr 20, 2024",
-    },
-  ];
+const importantLinks = [
+  {
+    title: "ePMS Portal",
+    icon: Database,
+    path: "https://epms.icmr.org.in",
+  },
+  {
+    title: "HTAIn",
+    icon: Microscope,
+    path: "https://htaindia.nic.in",
+  },
+  {
+    title: "Ethics",
+    icon: ShieldCheck,
+    path: "https://ethics.icmr.org.in",
+  },
+  {
+    title: "ICMR",
+    icon: Globe,
+    path: "https://www.icmr.gov.in",
+  },
+  {
+    title: "HMSC",
+    icon: FileText,
+    path: "https://hmsc.icmr.org.in",
+  },
+  {
+    title: "CTRI",
+    icon: Database,
+    path: "https://ctri.nic.in",
+  },
+];
+
 const WhatsNew = () => {
   return (
     <section className="bg-white py-10 lg:py-20">
@@ -83,35 +108,35 @@ const WhatsNew = () => {
                 View All
               </button>
             </div>
+              <div className="guideline-container max-h-[400px] overflow-y-auto">
+                {categories.map((item) => {
+                  const Icon = item.icon;
 
-            {categories.map((item, index) => {
-              const Icon = item.icon;
+                  return (
+                    <Link
+                      key={item.title}
+                      to={item.path}
+                      className="flex items-center justify-between border-t border-gray-100 px-5 py-4 hover:bg-gray-50"
+                    >
+                      <div className="flex items-start gap-3">
+                        <Icon className="h-8 w-8 shrink-0 text-blue-600" />
+                        <div>
+                          <h4 className="text-[0.95rem] text-gray-800">{item.title}</h4>
+                          <p className="text-sm text-gray-500">
+                            {item.count} Guidelines
+                          </p>
+                        </div>
+                      </div>
 
-              return (
-                <div
-                  key={index}
-                  className="flex items-center justify-between border-t border-gray-100 px-5 py-4 hover:bg-gray-50"
-                >
-                  <div className="flex items-center gap-3">
-                    <Icon className="h-7 w-7 text-blue-600" />
-                    <div>
-                      <h4 className="font-medium text-gray-800">
-                        {item.title}
-                      </h4>
-                      <p className="text-sm text-gray-500">
-                        {item.count} Guidelines
-                      </p>
-                    </div>
-                  </div>
-
-                  <ChevronRight className="h-5 w-5 text-gray-400" />
-                </div>
-              );
-            })}
-          </div>
+                      <ChevronRight className="h-5 w-5 shrink-0 text-gray-400" />
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
 
           {/* Development Process */}
-          <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm lg:col-span-6">
+          <div className="rounded-xl border border-gray-200 bg-white p-3 xl:p-6 shadow-sm lg:col-span-6">
             <div className="mb-8 flex items-center justify-between">
               <h3 className="text-lg font-semibold text-gray-800 uppercase">
                What’s New
@@ -122,7 +147,7 @@ const WhatsNew = () => {
               </button>
             </div>
 
-            <div className="grid grid-cols-1 gap-6">
+            <div className="grid grid-cols-1 gap-6 guideline-container max-h-[400px] overflow-y-auto">
             {whatsNewData.map((item, index) => (
               <a
                 key={index}
@@ -138,13 +163,9 @@ const WhatsNew = () => {
                     </div>
 
                     <div className="flex-1">
-                      <h3 className="text-base text-gray-900 group-hover:text-blue-600 transition-colors">
+                      <h3 className="text-[0.95rem]  text-gray-900 group-hover:text-blue-600 transition-colors">
                         {item.title}
                       </h3>
-
-                      {/* <p className="mt-2 text-sm text-gray-500 border border-gray-200 p-2 inline-block rounded-full px-3 bg-blue-100">
-                       View Document
-                      </p> */}
                     </div>
 
                     <svg
@@ -171,39 +192,46 @@ const WhatsNew = () => {
           <div className="rounded-xl border border-gray-200 bg-white shadow-sm lg:col-span-3">
             <div className="flex items-center justify-between p-5">
               <h3 className="text-lg font-semibold text-gray-800 uppercase">
-                Latest Updates
+               Important Links
               </h3>
               <button className="text-sm font-medium text-blue-600 uppercase">
                 View All
               </button>
             </div>
 
-            <div className="space-y-4 p-5 pt-0">
-              {updates.map((item, index) => (
-                <div key={index} className="flex gap-3">
-                  <img
-                    src={item.image}
-                    alt=""
-                    className="h-16 w-20 rounded-md object-cover"
-                  />
+            <div className="space-y-4 p-5 pt-0 guideline-container max-h-[400px] overflow-y-auto">
+                <div className="grid gap-3">
+                  {importantLinks.map((link) => {
+                    const Icon = link.icon;
 
-                  <div>
-                    {item.badge && (
-                      <span className="mb-1 inline-block rounded bg-green-100 px-2 py-0.5 text-[10px] font-semibold text-green-700">
-                        {item.badge}
-                      </span>
-                    )}
+                    return (
+                      <a
+                        key={link.title}
+                        href={link.path}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group flex items-center justify-between rounded-xl border border-gray-200 bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-md"
+                      >
+                        <div className="flex items-center gap-4">
+                          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 transition-colors group-hover:bg-blue-100">
+                            <Icon className="h-6 w-6 text-blue-600" />
+                          </div>
 
-                    <h4 className="line-clamp-2 text-sm font-medium text-gray-800">
-                      {item.title}
-                    </h4>
+                          <div>
+                            <h3 className="font-semibold text-gray-800">
+                              {link.title}
+                            </h3>
+                            <p className="text-sm text-gray-500">
+                              Open portal
+                            </p>
+                          </div>
+                        </div>
 
-                    <p className="mt-1 text-xs text-gray-500">
-                      {item.date}
-                    </p>
-                  </div>
+                        <ExternalLink className="h-5 w-5 text-gray-400 transition-transform group-hover:translate-x-1 group-hover:text-blue-600" />
+                      </a>
+                    );
+                  })}
                 </div>
-              ))}
             </div>
           </div>
         </div>

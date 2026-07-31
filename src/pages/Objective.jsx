@@ -2,6 +2,10 @@ import React from 'react'
 import assets from '../assets/assets'
 import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
+import { BsTwitterX } from "react-icons/bs";
+import { FaLinkedinIn } from "react-icons/fa6";
+import { FaFacebookF } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa6";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 const objectives = [
   "To undertake HTA studies aiming at maximizing health in the population, reducing out of pocket expenditure (OOP) and reducing inequity.",
@@ -46,16 +50,49 @@ const Objective = () => {
           " Objectives";
   return (
     <>
-     <section>
-       <div className="w-full min-h-[280px] flex items-center justify-center relative overflow-hidden bg-cover bg-center"
-              style={{ backgroundImage: `url(${assets.htainBanner})` }}
+    <nav className="breadcrumb-banner relative overflow-hidden">
+     <div className="container mx-auto px-6 py-6 lg:py-16">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+        <div>
+            <h1 className="text-2xl lg:text-4xl font-medium text-white">
+              Mandate / <span className="font-medium">Objectives</span>
+            </h1>
+
+            <div className="flex items-center gap-3 mt-4 text-sm">
+            <a
+                href="/"
+                className="text-gray-300 font-medium hover:text-blue-300 transition"
             >
-              <div className="absolute inset-0 bg-black/50"></div>
-          <h1 className="relative z-10 text-white text-4xl font-bold uppercase">
-               Introduction
-          </h1>
+                Home
+            </a>
+
+            <span className="text-slate-400">&gt;</span>
+
+            <span className="text-white">
+                Objectives
+            </span>
+            </div>
         </div>
-    </section>
+
+          <div className="flex-grow-0 xl:flex items-center gap-5 bg-violet-500 px-6 py-3 rounded-full shadow-lg hidden">
+              <button className="text-white hover:scale-110 transition">
+                  <BsTwitterX/>
+              </button>
+
+              <button className="text-white hover:scale-110 transition">
+                <FaLinkedinIn/>
+              </button>
+
+              <button className="text-white hover:scale-110 transition">
+                <FaFacebookF/>
+              </button>
+              <button className="text-white hover:scale-110 transition">
+                <FaInstagram/>
+              </button>
+          </div>
+       </div>
+      </div>
+    </nav>
   
      <section className="bg-slate-50 py-16">
       <div className="mx-auto max-w-7xl px-6">

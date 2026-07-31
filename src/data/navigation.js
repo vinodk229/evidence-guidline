@@ -22,10 +22,7 @@ export const navigation = [
         title: "Secretary",
         path: "/secretary",
       },
-      {
-        title: "Additional Secretary",
-        path: "#",
-      },
+     
       {
         title: "Objectives",
         path: "/objectives",
@@ -66,14 +63,14 @@ export const navigation = [
     ],
   },
   {
-    title: "Events",
+    title: "Media",
     children: [
       {
-        title: "Upcoming Events",
-        path: "/#",
+        title: "Photos",
+        path: "/gallery",
       },
       {
-        title: "Past Events",
+        title: "Videos",
         path: "#",
       },
     ],
