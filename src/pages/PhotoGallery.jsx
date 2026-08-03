@@ -163,11 +163,11 @@ const PhotoGallery = () => {
             <img
               src={images[selectedIndex].src}
               alt={images[selectedIndex].caption}
-              className="max-h-[80vh] max-w-full rounded-xl object-contain"
+              className="h-[650px] max-w-full rounded-t-xl object-contain"
             />
 
-            <div className="mt-4 rounded-lg bg-white/10 px-5 py-3 text-center text-white backdrop-blur-sm">
-              <p className="font-medium">
+            <div className="mt-0 w-full rounded-b-xl bg-blue-800 px-5 py-3 text-center text-white backdrop-blur-sm">
+            <p className="font-medium">
                 {images[selectedIndex].caption}
               </p>
             </div>

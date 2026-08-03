@@ -38,7 +38,7 @@ const AboutUs = () => {
     "Centre for Evidence Based Guidelines";
 
   return (
-    <section className="py-10 lg:py-24 bg-white">
+    <section className="py-10 lg:py-16 bg-white">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 items-center">
           
@@ -51,10 +51,10 @@ const AboutUs = () => {
             />
           </div>
           <div>
-            <p className="inline-block px-4 py-2 text-sm font-medium bg-red-100 text-red-600 rounded-full mb-4">About us</p>
+            <p className="inline-block px-4 py-2 text-sm font-medium bg-red-100 text-red-600 rounded-full mb-3">About us</p>
             <h2
               ref={titleRef}
-              className="text-2xl mt-4 md:text-4xl lg:text-4xl font-bold text-gray-900 mb-6 leading-tight overflow-hidden max-w-2xl"
+              className="text-2xl md:text-4xl lg:text-4xl font-bold text-gray-900 mb-4 leading-tight overflow-hidden max-w-2xl"
             >
               {headingText.split(" ").map((word, index) => (
                 <span
@@ -66,7 +66,7 @@ const AboutUs = () => {
               ))}
             </h2>
             <div className="mb-6">
-               <p className="text-gray-600 leading-8 line-clamp-6 lg:line-clamp-3 mb-4">
+               <p className="text-gray-600 leading-7 line-clamp-6 lg:line-clamp-3 mb-4">
                 The development of evidence-based guidelines is crucial for enhancing healthcare quality, optimizing treatment strategies, and ensuring the efficient use of resources. Globally, organizations like the World Health Organization (WHO) continuously refine these guidelines through rigorous research and expert consensus. In India, the need for such guidelines is particularly pressing due to diverse healthcare challenges, regional disparities, and resource limitations. The fragmented nature of guideline development, along with the absence of a centralized authority, has impacted the uniformity and scientific rigor of clinical standards. 
               </p>
              <a className="text-blue-600 p-2" href='/abouthtain'>Read more...</a>
@@ -89,7 +89,7 @@ const AboutUs = () => {
                   <h3 className="text-xl md:text-2xl text-gray-700">
                     Our Vision
                   </h3>
-                  <p className="mt-3 text-gray-600 leading-7 text-sm md:text-base">
+                  <p className="mt-2 text-gray-600 leading-7 text-sm md:text-base">
                     To improve healthcare quality in India. To lead efforts in gathering
                     and coordinating healthcare research.
                   </p>
@@ -111,7 +111,7 @@ const AboutUs = () => {
                   <h3 className="text-xl md:text-2xl text-gray-700">
                     Our Mission
                   </h3>
-                  <p className="mt-3 text-gray-600 leading-7 text-sm md:text-base">
+                  <p className="mt-2 text-gray-600 leading-7 text-sm md:text-base">
                     The Centre is committed to coordinating the development of
                     evidence-based guidelines that reflect the best available scientific
                     research.

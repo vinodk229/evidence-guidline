@@ -80,11 +80,11 @@ const KeyStatistics = () => {
   }, []);
 
   return (
-    <section className="bg-gray-100 py-10 lg:py-24">
+    <section className="bg-gray-100 py-10 lg:py-16">
       <div className="container mx-auto">
           <h2
               ref={titleRef}
-              className="text-2xl md:text-4xl lg:text-4xl text-center text-gray-900 mb-6 leading-tight overflow-hidden pb-5 xl:pb-14"
+              className="text-2xl md:text-4xl lg:text-4xl text-center text-gray-900 mb-6 leading-tight overflow-hidden pb-5 xl:pb-6"
             >
               Key Statistics
          </h2>

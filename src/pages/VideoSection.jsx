@@ -55,7 +55,7 @@ const VideoSection = () => {
                 <div className="aspect-video">
                     <iframe
                     className="w-full h-full rounded-lg"
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                    src="https://www.youtube.com/embed/8Z9c0JAGQSA?start=14"
                     title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
@@ -64,7 +64,7 @@ const VideoSection = () => {
                 <div className="aspect-video">
                     <iframe
                     className="w-full h-full rounded-lg"
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                    src="https://www.youtube.com/embed/8Z9c0JAGQSA?start=14"
                     title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
@@ -73,7 +73,7 @@ const VideoSection = () => {
                 <div className="aspect-video">
                     <iframe
                     className="w-full h-full rounded-lg"
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                    src="https://www.youtube.com/embed/8Z9c0JAGQSA?start=14"
                     title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen

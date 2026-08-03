@@ -88,7 +88,7 @@ const AboutHtain = () => {
         </div>
         </div>
       </nav>
-      <div className="container mx-auto px-4 lg:px-8 py-10">
+      <div className="container mx-auto px-4 py-10 lg:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] xl:gap-12">
           <div className="overflow-hidden rounded-2xl order-2 md:order-1">
             <img
@@ -118,7 +118,7 @@ const AboutHtain = () => {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
           {/* Vision Card */}
           <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-all duration-300">
             <div className="flex items-center gap-3 mb-6">

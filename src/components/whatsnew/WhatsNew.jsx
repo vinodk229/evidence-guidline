@@ -95,7 +95,7 @@ const importantLinks = [
 
 const WhatsNew = () => {
   return (
-    <section className="bg-white py-10 lg:py-20">
+    <section className="bg-white py-10 lg:py-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
           {/* Explore Guidelines */}
@@ -147,7 +147,7 @@ const WhatsNew = () => {
               </button>
             </div>
 
-            <div className="grid grid-cols-1 gap-6 guideline-container max-h-[400px] overflow-y-auto">
+            <div className="grid grid-cols-1 gap-3 guideline-container max-h-[400px] overflow-y-auto">
             {whatsNewData.map((item, index) => (
               <a
                 key={index}
