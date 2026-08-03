@@ -1,5 +1,4 @@
 import React from 'react'
-import assets from '../assets/assets';
 import { BsTwitterX } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { FaFacebookF } from "react-icons/fa6";

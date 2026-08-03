@@ -2,7 +2,6 @@ import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import assets from '../../assets/assets'
-import { Link } from "lucide-react";
 gsap.registerPlugin(ScrollTrigger);
 
 const AboutUs = () => {
