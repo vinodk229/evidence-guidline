@@ -71,7 +71,7 @@ export const navigation = [
       },
       {
         title: "Videos",
-        path: "#",
+        path: "videos",
       },
     ],
   },

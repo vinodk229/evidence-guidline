@@ -16,6 +16,7 @@ import LungCancerTreatmentPalliationGuidelines from '../pages/LungCancerTreatmen
 import WorkshopsConducted from '../pages/WorkshopsConducted'
 import Contact from '../pages/Contact'
 import PhotoGallery from '../pages/PhotoGallery'
+import VideoSection from '../pages/VideoSection'
 const AppRoutes = () => {
   return (
     <BrowserRouter>
@@ -34,6 +35,7 @@ const AppRoutes = () => {
                 <Route path='/lung-cancer-treatment-and-palliation-guidelines' element={<LungCancerTreatmentPalliationGuidelines/>} />
                 <Route path='/workshop-conducted' element={<WorkshopsConducted/>} />
                 <Route path='/gallery' element={<PhotoGallery />} />
+                <Route path='/videos' element={<VideoSection />} />
                 <Route path='/contact' element={<Contact />}/>
            </Route>
         </Routes>
