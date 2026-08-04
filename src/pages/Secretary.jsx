@@ -17,7 +17,7 @@ const Secretary = () => {
   return (
     <>
     <nav className="breadcrumb-banner relative overflow-hidden">
-     <div className="container mx-auto px-6 py-6 lg:py-16">
+     <div className="container mx-auto px-5 lg:px-8 py-8 lg:py-14">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
         <div>
             <h1 className="text-2xl lg:text-4xl font-medium text-white">
@@ -61,12 +61,12 @@ const Secretary = () => {
     </nav>
     
     <section className="bg-slate-50 py-16">
-  <div className="container mx-auto px-4">
+  <div className="container mx-auto px-5 lg:px-8">
 
     <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
 
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 p-8 lg:p-12">
+      <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 p-6 lg:p-12">
         <div className="flex flex-col lg:flex-row items-center gap-8">
 
           {/* Profile Image */}
@@ -97,7 +97,7 @@ const Secretary = () => {
               Ministry of Health & Family Welfare, Government of India
             </p>
           </div>
-            <div className="flex flex-wrap justify-center lg:justify-start gap-4 mt-6">
+            <div className="lg:flex flex-wrap justify-center lg:justify-start gap-4 mt-6 hidden">
               <div className="bg-white/10 backdrop-blur-md px-5 py-3 rounded-xl">
                 <h3 className="font-bold text-2xl">30+</h3>
                 <p className="text-sm">Years Experience</p>
@@ -122,7 +122,7 @@ const Secretary = () => {
       <div className="grid lg:grid-cols-3 gap-8 p-8 lg:p-12">
 
         {/* Left Side */}
-        <div className="space-y-6">
+        <div className="space-y-6 hidden lg:flex flex-col">
 
           <div className="bg-slate-50 rounded-2xl p-6">
             <h3 className="font-bold text-xl text-blue-900 mb-4">

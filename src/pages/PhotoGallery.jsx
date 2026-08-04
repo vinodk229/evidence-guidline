@@ -72,7 +72,7 @@ const PhotoGallery = () => {
   return (
      <>
      <nav className="breadcrumb-banner relative overflow-hidden">
-        <div className="container mx-auto px-6 py-12 lg:py-16">
+        <div className="container mx-auto px-5 lg:px-8 py-8 lg:py-14">
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
             <div>
                 <h1 className="text-2xl lg:text-4xl font-medium text-white">
@@ -95,7 +95,7 @@ const PhotoGallery = () => {
                 </div>
             </div>
 
-            <div className="flex-grow-0 flex items-center gap-5 bg-violet-500 px-6 py-3 rounded-full shadow-lg">
+            <div className="flex-grow-0 lg:flex items-center gap-5 bg-violet-500 px-6 py-3 rounded-full shadow-lg hidden">
                 <button className="text-white hover:scale-110 transition">
                    <BsTwitterX/>
                 </button>

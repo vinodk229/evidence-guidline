@@ -38,7 +38,7 @@ const AboutUs = () => {
 
   return (
     <section className="py-10 lg:py-16 bg-white">
-      <div className="container mx-auto px-4 lg:px-8">
+      <div className="container mx-auto px-5 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 items-center">
           
           {/* Image */}
@@ -72,7 +72,7 @@ const AboutUs = () => {
             </div>
            
             
-               <div className="flex flex-col lg:flex-row items-stretch gap-6">
+              <div className="flex flex-col lg:flex-row items-stretch gap-6">
               <div className="group relative flex flex-col sm:flex-row items-center sm:items-start p-5 bg-white border border-gray-100 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 w-full overflow-hidden">
                 <div className="absolute left-0 top-0 h-full w-1 bg-blue-600"></div>
 
@@ -80,7 +80,7 @@ const AboutUs = () => {
                   <img
                     src={assets.icons2}
                     alt="Vision"
-                    className="w-12 h-12 object-contain"
+                    className="w-8 h-8 lg:w-10 lg:h-10 object-contain"
                   />
                 </div>
 
@@ -102,7 +102,7 @@ const AboutUs = () => {
                   <img
                     src={assets.icons1}
                     alt="Mission"
-                    className="w-12 h-12 object-contain"
+                    className="w-8 h-8 lg:w-10 lg:h-10 object-contain"
                   />
                 </div>
 

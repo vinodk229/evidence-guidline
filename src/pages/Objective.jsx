@@ -51,7 +51,7 @@ const Objective = () => {
   return (
     <>
     <nav className="breadcrumb-banner relative overflow-hidden">
-     <div className="container mx-auto px-6 py-6 lg:py-16">
+     <div className="container mx-auto px-5 lg:px-8 py-8 lg:py-14">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
         <div>
             <h1 className="text-2xl lg:text-4xl font-medium text-white">
@@ -94,8 +94,8 @@ const Objective = () => {
       </div>
     </nav>
   
-     <section className="bg-slate-50 py-16">
-      <div className="mx-auto max-w-7xl px-6">
+     <section className="bg-slate-50 py-14">
+      <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <div className="mb-12 text-center">
         
            <h2
@@ -122,7 +122,7 @@ const Objective = () => {
             <img
               src={assets.submission}
               alt="Objectives"
-              className="h-[540px] w-full rounded-2xl object-cover shadow-xl border p-3"
+              className="h-[400px] xl:h-[540px] w-full rounded-2xl object-cover shadow-xl border p-3"
             />
           </div>
 

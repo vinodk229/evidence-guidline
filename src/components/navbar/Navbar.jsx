@@ -16,9 +16,15 @@ const Navbar = () => {
           <div className="flex items-center justify-between">
 
             {/* Logo */}
-            <div className="text-xl font-bold">
-             <Link to={'./'}><img src={assets.centerForGuid} alt="Logo" className="xl:h-24 lg:h-16 h-13 w-52 xl:w-auto" /></Link> 
-            </div>
+           <div className="font-bold">
+            <Link to="./">
+              <img
+                src={assets.centerForGuid}
+                alt="Logo"
+                className="h-10 sm:h-12 md:h-14 lg:h-16 xl:h-16 w-auto max-w-full"
+              />
+            </Link>
+          </div>
 
             {/* Desktop Menu */}
             <div className="hidden lg:flex items-center gap-8">

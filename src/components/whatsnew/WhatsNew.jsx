@@ -96,7 +96,7 @@ const importantLinks = [
 const WhatsNew = () => {
   return (
     <section className="bg-white py-10 lg:py-16">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-5 lg:px-8">
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
           {/* Explore Guidelines */}
           <div className="rounded-xl border border-gray-200 bg-white shadow-sm lg:col-span-3">
